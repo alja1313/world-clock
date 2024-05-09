@@ -17,9 +17,7 @@ function updateTime() {
   let parisTime = moment().tz("Europe/Paris");
 
   parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
-  parisTimeElement.innerHTML = parisTime.format(
-    "h:mm:ss:SSS [<small>]A[</small>]"
-  );
+  parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
 }
 
 updateTime();
@@ -30,6 +28,11 @@ citiesSelectElement.addEventListener("change", updateCity);
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+
+  if (cityTimeZone === "CurrentLocation") {
+    cityTimeZone = moment.tz.guess();
+  }
+
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
