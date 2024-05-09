@@ -1,5 +1,10 @@
 body {
-  background-color: #f9f7fe;
+  background: linear-gradient(
+    87.4deg,
+    rgb(255, 241, 165) 1.9%,
+    rgb(200, 125, 76) 49.7%,
+    rgb(83, 54, 54) 100.5%
+  );
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -21,7 +26,8 @@ select {
 }
 
 .container {
-  background: white;
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  color: #25161b;
   max-width: 600px;
   padding: 30px;
   margin: 60px auto;
@@ -34,7 +40,7 @@ select {
   margin: 10px 0;
   padding: 25px 0;
   justify-content: space-between;
-  border-bottom: 2px dashed grey;
+  border-bottom: 2px dashed #975a5e;
 }
 
 .city:last-child {
@@ -42,20 +48,26 @@ select {
 }
 
 .date {
-  opacity: 0.7;
+  opacity: 0.8;
+  color: #975a5e;
 }
 
 .time {
   font-size: 48px;
   font-weight: bold;
 }
+
 .time small {
   font-size: 20px;
   vertical-align: middle;
 }
 
 footer {
-  color: rgb(0, 0, 0, 0.7);
+  color: #25161b;
   text-align: center;
   font-size: 18px;
+}
+
+a {
+  color: #25161b;
 }
